@@ -1,0 +1,44 @@
+class Main {
+
+    // Cores ANSI para terminal
+    private static final String RESET = "\u001B[0m";
+    private static final String BLUE = "\u001B[34m";
+    private static final String CYAN = "\u001B[36m";
+    private static final String GREEN = "\u001B[32m";
+    private static final String YELLOW = "\u001B[33m";
+
+    public static void main(String[] args) {
+        // Cabeçalho
+        imprimirCabecalho();
+
+        // Mostrar todas as seções automaticamente
+        mostrarDescricao();
+        mostrarProjetos();
+        mostrarContato();
+    }
+
+    private static void imprimirCabecalho() {
+        System.out.println(CYAN + "*****");
+        System.out.println("              " + BLUE + "Meu Portfólio" + RESET);
+        System.out.println(CYAN + "*****\n");
+    }
+
+    private static void mostrarDescricao() {
+        System.out.println("\n" + GREEN + "Descrição:" + RESET);
+        System.out.println("Desenvolvedor Java | Apaixonado por tecnologia");
+        System.out.println("Criação de soluções simples e eficientes.\n");
+    }
+
+    private static void mostrarProjetos() {
+        System.out.println("\n" + GREEN + "Projetos:" + RESET);
+        System.out.println("- Sistema de Controle de Estoque");
+        System.out.println("- Aplicativo de Notas");
+        System.out.println("- Jogo da Velha em Java\n");
+    }
+
+    private static void mostrarContato() {
+        System.out.println("\n" + GREEN + "Entre em contato:" + RESET);
+        System.out.println("Email: seuemail@exemplo.com");
+        System.out.println("LinkedIn: linkedin.com/in/seunome\n");
+    }
+}
