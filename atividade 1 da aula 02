@@ -1,0 +1,19 @@
+// Classe responsável apenas por criar a conta
+public class AccountService {
+    private EmailService emailService;
+    private LoggerService loggerService;
+
+    public AccountService(EmailService emailService, LoggerService loggerService) {
+        this.emailService = emailService;
+        this.loggerService = loggerService;
+    }
+
+    public void createAccount(String username, String email) {
+        // Lógica de criação da conta
+        System.out.println("Conta criada para o usuário: " + username);
+
+        // Usando serviços separados
+        emailService.sendEmailConfirmation(email);
+        loggerService.logAccountCreation(username);
+    }
+}
