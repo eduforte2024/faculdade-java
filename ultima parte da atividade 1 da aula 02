@@ -1,0 +1,9 @@
+public class Main {
+    public static void main(String[] args) {
+        EmailService emailService = new EmailService();
+        LoggerService loggerService = new LoggerService();
+        AccountService accountService = new AccountService(emailService, loggerService);
+
+        accountService.createAccount("Eduarda", "eduarda@email.com");
+    }
+}
