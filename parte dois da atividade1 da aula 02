@@ -1,0 +1,6 @@
+// Classe responsável por enviar e-mails
+public class EmailService {
+    public void sendEmailConfirmation(String email) {
+        System.out.println("E-mail de confirmação enviado para: " + email);
+    }
+}
