@@ -1,0 +1,6 @@
+// Classe responsável por registrar logs
+public class LoggerService {
+    public void logAccountCreation(String username) {
+        System.out.println("Log: Conta criada para " + username);
+    }
+}
