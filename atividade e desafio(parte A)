@@ -1,0 +1,39 @@
+package aula.solid;
+
+// ----------------------------
+// Abstração comum
+// ----------------------------
+interface Shape {
+    int getArea();
+}
+
+// ----------------------------
+// Implementação correta
+// ----------------------------
+class Rectangle implements Shape {
+    private final int width;
+    private final int height;
+
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public int getArea() {
+        return width * height;
+    }
+}
+
+class Square implements Shape {
+    private final int side;
+
+    public Square(int side) {
+        this.side = side;
+    }
+
+    @Override
+    public int getArea() {
+        return side * side;
+    }
+}
