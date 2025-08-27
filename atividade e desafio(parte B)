@@ -1,0 +1,41 @@
+// ----------------------------
+// Interfaces segregadas
+// ----------------------------
+interface Printer {
+    void print(String content);
+}
+
+interface ScannerDevice {
+    void scan(String document);
+}
+
+interface Fax {
+    void fax(String number, String content);
+}
+
+// ----------------------------
+// Implementações
+// ----------------------------
+class BasicPrinter implements Printer {
+    @Override
+    public void print(String content) {
+        System.out.println("[PRINT] " + content);
+    }
+}
+
+class OfficeAllInOne implements Printer, ScannerDevice, Fax {
+    @Override
+    public void print(String content) {
+        System.out.println("[PRINT] " + content);
+    }
+
+    @Override
+    public void scan(String document) {
+        System.out.println("[SCAN] " + document);
+    }
+
+    @Override
+    public void fax(String number, String content) {
+        System.out.println("[FAX] Enviando para " + number + ": " + content);
+    }
+}
