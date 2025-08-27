@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        // ---------- LSP ----------
+        Shape r1 = new Rectangle(5, 10);
+        System.out.println("Área (retângulo): " + r1.getArea()); // 50
+
+        Shape r2 = new Square(10);
+        System.out.println("Área (quadrado): " + r2.getArea()); // 100
+
+        // ---------- ISP ----------
+        Printer impressoraSimples = new BasicPrinter();
+        impressoraSimples.print("Contrato 123");
+
+        OfficeAllInOne multi = new OfficeAllInOne();
+        multi.print("Relatório Final");
+        multi.scan("Documento de Identidade");
+        multi.fax("555-1234", "Olá mundo!");
+    }
+}
